@@ -10,7 +10,7 @@ def len_count(text):
 
 def echo_sd(text):
     print("__人",end="")
-    display_len = len_count(text)/2)-1
+    display_len = int(len_count(text)/2) - 1
     for i in range(display_len):
         print("人",end="")
 
@@ -21,7 +21,7 @@ def echo_sd(text):
     for i in range(display_len):
         print("Y^",end="")
     print("Y￣")
-    
+
 if __name__ == "__main__":
     t = input("Input : ")
     echo_sd(t)
