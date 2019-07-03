@@ -17,10 +17,11 @@ def echo_sd(text):
     print("人__")
     print("＞ " + text + " ＜")
     print("￣Y^", end="")
-    
+
     for i in range(display_len):
         print("Y^",end="")
     print("Y￣")
-
-t = input("Input : ")
-echo_sd(t)
+    
+if __name__ == "__main__":
+    t = input("Input : ")
+    echo_sd(t)
