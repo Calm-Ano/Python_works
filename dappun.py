@@ -12,4 +12,5 @@ def dappun(name):
     return retstr
 
 if __name__ == "__main__":
-    print(dappun("kaito"))
+    name = input("Input target name : ")
+    print(dappun(name))
