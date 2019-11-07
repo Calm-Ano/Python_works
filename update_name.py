@@ -75,4 +75,4 @@ if __name__ == "__main__":
     mSL = MyStreamListener()
     mS = tweepy.Stream(auth = me.auth, listener=mSL)
     print('[*]Listenning')
-    mS.filter(track=['tun_in_Y'])
+    mS.filter(track=['account_name'])
