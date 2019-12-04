@@ -1,0 +1,11 @@
+#-*-coding:utf-8-*-
+post_sign_up = '{"code":"200"}'
+put_sign_up = '{"code":"200"}'
+post_sign_in = '{"code":"200"}'
+put_update_profile = '{"code":"200"}'
+get_quests = '{"code":"200","data_num":"2"[{"quest_id":"m_0000001","account_id":"17fi008","user_name":"大学太郎","title":"電卓貸して","from_to":["2019-12-3-9:20","2019-12-8-11:00"],"reward":"きのこの山1箱"},{"quest_id":"m_0000106","account_id":"17fi106","user_name":"大学大好き侍","title":"Python教えてください","from_to":["2019-12-3-17:20","2019-12-8-19:00"],"reward":"１武蔵"},]}'
+get_quests_y_id = '{"title":"関数電卓を貸して!!","detail":"関数電卓、、借してほしーの","from_to":["2019-12-6-13:40","2019-12-6-15:20"],"reward":""}'
+post_quests = '{"code":"200"}'
+put_quests = '{"code":"200"}'
+delete_quests = '{"code":"200"}'
+get_users_y_id = '{"user_name":"ななし","detail":"テストテストテストテストテストテストテストテストテスト","good":"46","ok":"23","ad":"13"}'
