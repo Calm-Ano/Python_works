@@ -1,11 +1,10 @@
-
 # -*-  coding:utf-8 -*-
 import random
 
 def dappun(name):
     li = ['ﾌﾞ','ﾘｭ','ﾘ','ｯ','ﾁ']
-    retstr = str()
-    retstr += '@{}「'.format(name)
+    retstr = '@' + str()
+    retstr += '{}「'.format(name)
     for i in range(0, 50):
         retstr += random.choice(li)
     retstr += '」'

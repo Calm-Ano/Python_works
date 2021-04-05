@@ -2,7 +2,6 @@
 
 import tweepy
 import urllib
-import sys
 import datetime
 import dappun
 
@@ -10,6 +9,7 @@ t_ck = ''
 t_cs = ''
 t_tk = ''
 t_ts = ''
+
 
 def auth(ck, cs, tk, ts):
     auth = tweepy.OAuthHandler(ck, cs)
@@ -19,6 +19,7 @@ def auth(ck, cs, tk, ts):
     except:
         print('error in auth()')
     return api
+
 
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
@@ -41,7 +42,7 @@ class MyStreamListener(tweepy.StreamListener):
                             message = '@'+status.author.screen_name+'名前を変更しました'
                             me.update_status(status=message, in_reply_to_status_id=status.id)
                     else:
-                        me.update_status(status='@{} 不適切な語句です。しね。'.format(status.user.screen_name), in_reply_to_status_id=status.id)
+                        me.update_status(status='@{} 不適切な語句が含まれています。'.format(status.user.screen_name), in_reply_to_status_id=status.id)
             elif status.text.find("脱糞") > 0:
                 index = status.text.find("脱糞")
                 target_id = status.text[index+4:]
@@ -53,7 +54,7 @@ class MyStreamListener(tweepy.StreamListener):
             elif 'update_icon' in status.text:
                  if 'media' in status.entities :
                     medias = status.entities['media']
-                    m =  medias[0]
+                    m = medias[0]
                     media_url = m['media_url']
                     try:
                         urllib.request.urlretrieve(media_url, 'icon.jpg')
@@ -68,6 +69,7 @@ class MyStreamListener(tweepy.StreamListener):
                     except tweepy.error.TweepError as e:
                         print("error response code: " + str(e.response.status))
                         print("error message: " + str(e.response.reason))
+
 
 if __name__ == "__main__":
     me = auth(t_ck, t_cs, t_tk, t_ts)
