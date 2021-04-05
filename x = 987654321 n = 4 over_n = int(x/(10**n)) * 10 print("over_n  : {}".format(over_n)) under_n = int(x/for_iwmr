@@ -1,7 +1,0 @@
-x = 987654321
-n = 4
-over_n = int(x/(10**n)) * 10
-print("over_n  : {}".format(over_n))
-under_n = int(x/(10**(n-1)))
-print("under_n : {}".format(under_n))
-print("下位からn桁目 : {}".format(under_n - over_n))
